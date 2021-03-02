@@ -1,0 +1,13 @@
+Define LookML?
+  LookML is a language for illustrating dimensions, aggregates, calculations, and data relationships in a SQL database. 
+  Looker uses a model written in LookML to construct SQL queries against a particular database.
+Describe your database in a model once, and the people without much database knowledge can explore the data for themselves. 
+And the language created to implement this is called LookML.
+  
+Some of the fundamentals of LookML before we get started with LookML in detail like:
+  Parameters : LookML is made up of parameters to which we assign values either single or multiple values besides few parameters can accept other parameters using curly braces.
+  Comments: Just notes or text which we want to include with a number sign (#), but they aren’t part of the LookML.
+            No more LookML will occur on that row once Comments are initiated.
+  Spacing: LookML never bother about extra spaces.
+  Indentation: LookML neither care about indentation too, meanwhile using correct indentation will help a lot with readability of LookML.
+  Lines: LookML doesn't mind about empty lines, but it does care about putting each parameter on its own line.
