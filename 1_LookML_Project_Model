@@ -14,7 +14,7 @@ A model references a combination of related explores. Unlike other LookML elemen
       persist_with: datagroup-ref
       test: identifier
       view: identifier
-      week_start_day: monday or ...
+      week_start_day: monday or ....
       }
       
 Models - Models are the place where we will define our explores. In general we’ll have one model per database. 
