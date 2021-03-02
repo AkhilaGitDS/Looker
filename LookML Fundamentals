@@ -1,8 +1,12 @@
 Define LookML?
   LookML is a language for illustrating dimensions, aggregates, calculations, and data relationships in a SQL database. 
   Looker uses a model written in LookML to construct SQL queries against a particular database.
+  
 Describe your database in a model once, and the people without much database knowledge can explore the data for themselves. 
 And the language created to implement this is called LookML.
+
+For a long time the fundamental language of data analytics has been SQL and its well known language for many analysts and developers. 
+LookML is massively SQl based, still friendly to any one who has SQL experience, but LookML is modular and reusable.
   
 Some of the fundamentals of LookML before we get started with LookML in detail like:
   Parameters : LookML is made up of parameters to which we assign values either single or multiple values besides few parameters can accept other parameters using curly braces.
