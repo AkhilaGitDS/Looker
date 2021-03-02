@@ -9,3 +9,8 @@ LookML separates structure from content, so the query structure (how tables are 
 LookML syntax has a structure that is clear and easy to learn. 
 
 LookML and IDE folder names are case-sensitive.
+
+Setting up a LookML project involves 3 main steps:
+  1. Creating a database connection to access the data.
+  2. Creating and configuring a project to hold our data model.
+  3. And Setting up version control to manage the changes to the data model. 
