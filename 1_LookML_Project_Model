@@ -1,0 +1,27 @@
+A model references a combination of related explores. Unlike other LookML elements, a model is not declared explicitly with the model keyword.
+      model: {
+      access_grant: identifier
+      case_sensitive: yes or no
+      connection: "string"
+      datagroup: identifier
+      explore: identifier
+      fiscal_month_offset: number
+      include: "string"
+      label: possibly-localized-string
+      map_layer: identifier
+      named_value_format: identifier
+      persist_for: "string"
+      persist_with: datagroup-ref
+      test: identifier
+      view: identifier
+      week_start_day: monday or ...
+      }
+      
+Models - Models are the place where we will define our explores. In general we’ll have one model per database. 
+         However, models can be used to control various types of data access, so we might break this rule. 
+         Models are stored in model files. The model name is the name of the file.
+         By definition, there is only one model per model file. This is because we create a model by creating its file. 
+    
+Explores - Explores define which views will be shown in the Explore menu at the top of Looker. 
+           You can also define join relationships between multiple views to create explores that contain information from multiple views.
+           Explores live inside of models.
