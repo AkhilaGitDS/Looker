@@ -1,0 +1,12 @@
+connection: "lookerdata_publicdata"  # Define which database connection to use
+include: "*.view.lkml"               # Include all views in this model
+
+# Create an explorable item based on the "lesson_1_names" view
+explore: lesson_1_names {
+
+  # Give the explore a user-friendly name in the Explore menu
+  label: "1. Basic Views and Models"
+
+  # Place this explore under a "Name Game" header in the explore menu
+  group_label: "Name Game"
+}
