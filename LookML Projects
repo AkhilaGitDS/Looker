@@ -1,0 +1,11 @@
+LookML Projects
+  A LookML Project is a group of model, view, and dashboard files that are generally version controlled at once via a Git repository. 
+    The model files contain data about which db tables to use, and how they should be joined together. 
+    The view files contain data about how to calculate information about each db table.
+
+LookML separates structure from content, so the query structure (how tables are joined) is independent of the query content 
+(the columns to access, derived fields, aggregate functions to compute, and filtering expressions to apply).
+
+LookML syntax has a structure that is clear and easy to learn. 
+
+LookML and IDE folder names are case-sensitive.
