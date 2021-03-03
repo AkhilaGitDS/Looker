@@ -1,0 +1,48 @@
+Model::
+        connection :- connection specifies the database connection from which a model will retrieve data. 
+        Database connections are defined and named in Looker's Admin settings. A model may only use one connection.
+        connection: "string"
+        
+        include :- use include "file_name_glob" to access views, explores, and other symbols defined in another file.
+        Use a file name or standard glob syntax: *, ?, [abc], [a-z], and [! ] are supported.
+        include: "string"
+        
+        explore :- explore adds an existing view to the Explore menu of Looker. 
+                   Although an explore can be written inside of a view file, it is always best practice to write it within a model file instead.
+                    explore: identifier {
+                    access_filter:
+                    aggregate_table: identifier
+                    always_filter:
+                    always_join: [view-ref]
+                    cancel_grouping_fields: [field-ref]
+                    conditionally_filter:
+                    case_sensitive: yes or no
+                    description: possibly-localized-string
+                    group_label: possibly-localized-string
+                    extends: [explore-ref]
+                    extension: required or ...
+                    from: view-ref
+                    fields: [field-ref]
+                    final: yes or no
+                    hidden: yes or no
+                    join: identifier
+                    label: possibly-localized-string
+                    query: identifier
+                    persist_for: "string"
+                    persist_with: datagroup-ref
+                    required_access_grants: [access-grant-ref]
+                    sql_always_where: sql-block ;;
+                    sql_always_having: sql-block ;;
+                    sql_table_name: sql-block ;;
+                    tags: ["string"]
+                    view_label: possibly-localized-string
+                    view_name: view-ref
+                    }
+       
+                   label :- label changes the way that this explore will appear in the Explore menu. 
+                            Unless specified, the label defaults to the name of the explore with underscores replaced with spaces and each word capitalized.
+                            label: possibly-localized-string
+
+                   group_label :- group_label can be used to create custom groups of explores in the explore picker. 
+                                  Defaults to the label of the model.
+                                  group_label: possibly-localized-string
