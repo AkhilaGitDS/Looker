@@ -1,0 +1,155 @@
+The View::
+         A view represents a table of data in Looker, whether a native database table or a derived table. 
+         Generally, views are declared in a view file with one view per file.
+            view: identifier {
+            dimension: identifier
+            dimension_group: identifier
+            drill_fields: [field-ref]
+            extends: [view-ref]
+            extension: required or ...
+            filter: identifier
+            final: yes or no
+            label: possibly-localized-string
+            measure: identifier
+            parameter: identifier
+            derived_table:
+            required_access_grants: [access-grant-ref]
+            set: identifier
+            sql_table_name: sql-block ;;
+            suggestions: yes or no
+            view_label: possibly-localized-string
+            }
+            
+            sql_table_name :- Sql table name, sets the database table that will be queried by a view, defaulting to the name of the view.
+            sql_table_name: sql-block;;
+            
+            dimension :- dimension defines a representation of a column in a table, or a computed value based on some sort of column manipulation or combination.
+            dimension: identifier {
+            action:
+            allow_fill: yes or no
+            alpha_sort: yes or no
+            bypass_suggest_restrictions: yes or no
+            can_filter: yes or no
+            case:
+            case_sensitive: yes or no
+            datatype: epoch or ...
+            drill_fields: [field-ref]
+            end_location_field: field-ref
+            fanout_on: "string"
+            full_suggestions: yes or no
+            group_label: possibly-localized-string
+            group_item_label: possibly-localized-string
+            html: html-block ;;
+            label_from_parameter: field-ref
+            link:
+            map_layer_name: map-layer-ref
+            order_by_field: field-ref
+            primary_key: yes or no
+            required_fields: [field-ref]
+            skip_drill_filter: yes or no
+            start_location_field: field-ref
+            suggestions: ["string"]
+            suggest_persist_for: "string"
+            style: classic or ...
+            sql: sql-block ;;
+            sql_end: sql-block ;;
+            sql_start: sql-block ;;
+            tiers: [number]
+            sql_longitude: sql-block ;;
+            sql_latitude: sql-block ;;
+            string_datatype: unicode or ...
+            units: feet or ...
+            value_format: "string"
+            value_format_name: value-format-ref
+            alias: [identifier]
+            convert_tz: yes or no
+            description: possibly-localized-string
+            hidden: yes or no
+            label: possibly-localized-string
+            required_access_grants: [access-grant-ref]
+            suggestable: yes or no
+            tags: ["string"]
+            type: date or ...
+            suggest_dimension: field-ref
+            suggest_explore: explore-ref
+            view_label: possibly-localized-string
+            }
+            
+                  type :- type specifies the value type of this field.
+                      type:
+                      date or
+                      distance or
+                      location or
+                      number or
+                      string or
+                      tier or
+                      yesno or
+                      zipcode or
+                      date_day_of_month or
+                      date_day_of_week or
+                      date_day_of_week_index or
+                      date_day_of_year or
+                      date_fiscal_month_num or
+                      date_fiscal_quarter or
+                      date_fiscal_quarter_of_year or
+                      date_fiscal_year or
+                      date_hour or
+                      date_hour2 or
+                      date_hour3 or
+                      date_hour4 or
+                      date_hour6 or
+                      date_hour8 or
+                      date_hour12 or
+                      date_hour_of_day or
+                      date_microsecond or
+                      date_millisecond or
+                      date_millisecond2 or
+                      date_millisecond4 or
+                      date_millisecond5 or
+                      date_millisecond8 or
+                      date_millisecond10 or
+                      date_millisecond20 or
+                      date_millisecond25 or
+                      date_millisecond40 or
+                      date_millisecond50 or
+                      date_millisecond100 or
+                      date_millisecond125 or
+                      date_millisecond200 or
+                      date_millisecond250 or
+                      date_millisecond500 or
+                      date_minute or
+                      date_minute2 or
+                      date_minute3 or
+                      date_minute4 or
+                      date_minute5 or
+                      date_minute6 or
+                      date_minute10 or
+                      date_minute12 or
+                      date_minute15 or
+                      date_minute20 or
+                      date_minute30 or
+                      date_month or
+                      date_month_name or
+                      date_month_num or
+                      date_quarter or
+                      date_quarter_of_year or
+                      date_raw or
+                      date_second or
+                      date_time or
+                      date_time_of_day or
+                      date_week or
+                      date_week_of_year or
+                      date_year or
+                      duration_day or
+                      duration_hour or
+                      duration_minute or
+                      duration_month or
+                      duration_quarter or
+                      duration_second or
+                      duration_week or
+                      duration_year
+                  
+                  
+                  SQL :- sql declares the SQL expression used to define the value of this field.
+                          sql: sql-block;;
+                      
