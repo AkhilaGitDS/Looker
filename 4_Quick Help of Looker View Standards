@@ -152,4 +152,48 @@ The View::
                   
                   SQL :- sql declares the SQL expression used to define the value of this field.
                           sql: sql-block;;
+                         
+                  measures: measure defines a field that represents information about multiple rows. These are similar to aggregate functions in SQL like COUNT, SUM, or AVG.
+                                    measure: identifier {
+                                    action:
+                                    approximate: yes or no
+                                    approximate_threshold: number
+                                    allow_approximate_optimization: yes or no
+                                    can_filter: yes or no
+                                    datatype: epoch or ...
+                                    direction: "string""row" or ...
+                                    drill_fields: [field-ref]
+                                    fanout_on: "string"
+                                    filters: [identifier: "string"]
+                                    group_label: possibly-localized-string
+                                    group_item_label: possibly-localized-string
+                                    html: html-block ;;
+                                    label_from_parameter: field-ref
+                                    link:
+                                    list_field: field-ref
+                                    order_by_field: field-ref
+                                    percentile: number
+                                    precision: number
+                                    required_fields: [field-ref]
+                                    sql: sql-block ;;
+                                    sql_distinct_key: sql-block ;;
+                                    value_format: "string"
+                                    value_format_name: value-format-ref
+                                    alias: [identifier]
+                                    convert_tz: yes or no
+                                    description: possibly-localized-string
+                                    hidden: yes or no
+                                    label: possibly-localized-string
+                                    required_access_grants: [access-grant-ref]
+                                    suggestable: yes or no
+                                    tags: ["string"]
+                                    type: average or ...
+                                    suggest_dimension: field-ref
+                                    suggest_explore: explore-ref
+                                    view_label: possibly-localized-string
+                                    }
+                                    
+                  drill_fields :- The drill_fields parameter specifies which fields will be "drilled" into when a user clicks on a cell for this field.
+                                  Use splat syntax to incorporate fields from a set: [field, set*, field].
+                                  drill_fields: [field-ref]
                       
