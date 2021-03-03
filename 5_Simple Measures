@@ -1,0 +1,15 @@
+In " 2_Basic Data Explore in Looker ", we saw how 'dimension' is added to 'View'. Here lets see how we can add 'measure' to View.
+In LookML,  a measure means a summary or aggregate calculation, like AVERAGE, COUNT or SUM so on.
+Below is a simple example of adding measure to a view:
+            measure: name_count {       # Create a measure called "name_count", this measure get a count of unique names. 
+              type: count_distinct      # Declare that "name_count" has a type of count_distinct
+              sql: ${name} ;;           # Declare that the count_distinct is based on the "name" dimension
+              drill_fields: [name]      # Inform Looker that when a user clicks on one of these counts, it should list the "name" of the underlying records.
+            }                             
+
+            measure: total_population { # Create a measure called "total_population", this measure adds up the total population of the people.
+              type: sum                 # Declare that "total_population" has a type of sum
+              sql: ${population} ;;     # Declare that the sum is based on the "population" dimension
+            }
+            
+From the explore menu, we can explore with new measures like most common names, most common female names, count of unique names based on year, only males/females out of total population and so on.
