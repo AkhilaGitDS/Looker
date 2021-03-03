@@ -1,0 +1,56 @@
+We need 2 items to make our data explorable in Looker: a view and a model.
+
+The View::
+            Generally, every view communicate with one table in our database and they can also communicate to a table that we create in Looker.
+            views can hold dimensions which means columns in a table and views can also represent transformations of those columns.
+            views lives in files. Below is simple example for view::
+
+                  view: lesson_1_names {                                         # Create a view called "lesson_1" say which data table "names" relies on
+                  sql_table_name: `fh-bigquery.popular_names.usa_1910_2013`;;    # 'sql_table_name' parameter connect this view with a database table.
+
+                  dimension: name {         # Create a dimension called "name"
+                    type: string            # Declare that "name" has a data type of string
+                    sql: ${TABLE}.name ;;   # Declare that "name" takes the value of the "name" column from this view's table
+                  }                         # ${TABLE} is used to reference the view’s database table, which is a good way to keep the table defined exactly in one spot.
+
+                  dimension: gender {       # Create a dimension called "gender"
+                    type: string            # Declare that "gender" has a data type of string
+                    sql: ${TABLE}.gender ;; # Declare that "gender" takes the value of the "gender" column from this view's table
+                  }                           
+
+                  dimension: state {        # Create a dimension called "state"
+                    type: string            # Declare that "state" has a data type of string
+                    sql: ${TABLE}.state ;;  # Declare that "state" takes the value of the "state" column from this view's table
+                  }                         
+
+                  dimension: year {         # Create a dimension called "year"
+                    type: number            # Declare that "year" has a data type of number
+                    sql: ${TABLE}.year ;;   # Declare that "year" takes the value of the "year" column from this view's table
+                  }                       
+
+                  dimension: population {   # Create a dimension called "population" 
+                    type: number            # Declare that "population" has a data type of number
+                    sql: ${TABLE}.number ;; # Declare that "population" takes the value of the "number" column from this view's table
+                  }                         
+                }
+
+The Model::
+              Once view is created, we should inform Looker that it should be explorable and we do that in model.
+              Models carry explores, which means the views end-users should be able to communicate with. 
+              They can also define how various views can connect together into richer explores.
+              Models also live in files and below is the basic example for model::
+                    
+                    connection: "lookerdata_publicdata"  # Define which database connection to use
+                    include: "*.view.lkml"               # Include all views in this model
+
+                    # Create an explorable item based on the "lesson_1_names" view
+                    explore: lesson_1_names {
+
+                      # Give the explore a user-friendly name in the Explore menu
+                      label: "1. Basic Views and Models"
+
+                      # Place this explore under a "Name Game" header in the explore menu
+                      group_label: "Name Game"
+                    }
+                    
+Now end users, can start exploring our database information via View through Model.
