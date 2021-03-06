@@ -42,9 +42,12 @@ Describe Data Structures using Dependency language::
         LookML is independent of particular SQL dialects(MSSQL/MYSQL/Oracle and so on), and encapsulates SQL expressions to support any SQL implementation.
 
 LookML Is Case-Sensitive::
-        LookML is case-sensitive
+        LookML is case-sensitive, so be sure to match the case when referring to LookML elements, 
+        if not Looker will warn you if you are referring to element which doesn't exist and also suggests name which is existing .
+        The same repeats with IDE folder names as well as they are case-sensitive too. 
         
-        LookML and IDE folder names are case-sensitive.
+Summary of Fundamental LookML Elements::        
+            ![](path/to/image.png)
 Setting up a LookML project involves 3 main steps:
         1. Creating a database connection to access the data.
         2. Creating and configuring a project to hold our data model.
