@@ -45,5 +45,5 @@ LookML Is Case-Sensitive::
         The same repeats with IDE folder names as well as they are case-sensitive too. 
         
 Summary of Fundamental LookML Elements::        
-            <img src="/Images/lookml_project_hierarchy.png" width="900" height="700">
+           <img src="/Images/lookml_project_hierarchy.png" width="900" height="700">
           
