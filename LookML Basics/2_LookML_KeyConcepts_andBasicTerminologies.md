@@ -25,7 +25,7 @@ LookML Project is collection of LookML files which describes the set of related 
        Each Project can only have *One Manifest File*. When using Folders to organize LookML files, be sure that manifest file (*{} Manifest.lkml*) is kept at the *root level* at        the projects directory structure.
        LookML **Dashboard** files are stored as version controlled files associated with the Project. These *Dashboards* are YAML(Yet Another Markup Language / YAML Ain't Markup Language) based and defined inside the LookML by a developer.
        
-**DERIVED TABLES**::
+**DERIVED TABLES** ::
     As opposed to regular view, that pulls values directly from a database table, *Derived tables* pulls values from the results of a SQL query. 
     In Looker, Derived tables are comparable to SQL concepts of *Materialized Views, Common table expressions and Subqueries*. 
     A Derived table is exposed as its own views and defines *Dimensions* and *Measures* in same manner as conventional view.
