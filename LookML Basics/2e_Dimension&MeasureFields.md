@@ -16,3 +16,9 @@ In Looker, **Dimensions and Measures** fields are listed on the *Explore* page w
 
 <img src="/Images/LookML_Views-Dimensions&Measures.png" width=800 hieght=700>
 
+As per protocol, fields are declared as part of the view they belong to, stored in a view file.
+
+Below is the example declarations of dimensions and measures:
+
+<img src="/Images/LookML_Dim&Meas_DeclarationEg.png" width=450 hieght=500>
+
