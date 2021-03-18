@@ -2,26 +2,26 @@ view: 1_NameGame {                                         # Create a view calle
   sql_table_name: `fh-bigquery.popular_names.usa_1910_2013` ;; # Say which data table "names"
    dimension: name {         # Create a dimension called "name"
     type: string            # Declare that "name" has a data type of string
-    sql: ${TABLE}.name ;;   # Declare that "name" takes the value of the "name" column
-  }                         #   from this view's table
+    sql: ${TABLE}.name ;;   # Declare that "name" takes the value of the "name" column from this view's table
+  }                            
 
   dimension: gender {       # Create a dimension called "gender"
     type: string            # Declare that "gender" has a data type of string
-    sql: ${TABLE}.gender ;; # Declare that "gender" takes the value of the "gender" column
-  }                         #   from this view's table
+    sql: ${TABLE}.gender ;; # Declare that "gender" takes the value of the "gender" column from this view's table
+  }                           
 
   dimension: state {        # Create a dimension called "state"
     type: string            # Declare that "state" has a data type of string
-    sql: ${TABLE}.state ;;  # Declare that "state" takes the value of the "state" column
-  }                         #   from this view's table
+    sql: ${TABLE}.state ;;  # Declare that "state" takes the value of the "state" column from this view's table
+  }                            
 
   dimension: year {         # Create a dimension called "year"
     type: number            # Declare that "year" has a data type of number
-    sql: ${TABLE}.year ;;   # Declare that "year" takes the value of the "year" column
-  }                         #   from this view's table
+    sql: ${TABLE}.year ;;   # Declare that "year" takes the value of the "year" column from this view's table
+  }                            
 
   dimension: population {   # Create a dimension called "population"
     type: number            # Declare that "population" has a data type of number
-    sql: ${TABLE}.number ;; # Declare that "population" takes the value of the "number" column
-  }                         #   from this view's table
+    sql: ${TABLE}.number ;; # Declare that "population" takes the value of the "number" column from this view's table
+  }                           
 }
