@@ -14,7 +14,7 @@ Consider an *e-commerce dataset* with a *users table* holding customer data and 
 
 <img src="/Images/LookML_DRTbls&FCTbls.png">
 
-Since the primary key for the fact table(user_orders_facts table) is user_id, the view can be joined one-to-one with the users Explore(users table), allowing rich query possibilities. An example is shown below:
+Since the primary key for the fact table(user_orders_facts table) is user_id, the view can be joined one-to-one with the users Explore(users table), allowing expensive query possibilities. An example is shown below:
 
 <img src="/Images/LookML_user_order_factsEg.png" width=500 hieght=600>
 
