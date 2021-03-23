@@ -24,3 +24,17 @@ On the right side of the IDE is a context-sensitive help panel that actively upd
 This is how QuickHelp in IDE looks :
 
 <img src="/Images/LookML_QuickHelpIDE.png" width=550 hieght=700>
+
++*Automatic formatting:-*+
+
+When we are in Development Mode, we can use the *format file keyboard shortcut* to automatically indent our LookML file. The indentation shows the hierarchy of parameters and subparameters, making our LookML easier to read and understand.
+
++*Folding:-*+
+
+A small arrow appears in the gutter next to the start of each top-level LookML parameter in the file. Clicking this arrow folds or unfolds that section of LookML so that we can focus on just particular sections.
+
+<img src="/Images/LookML_FoldIDE.png" width=450 hieght=500>
+
+The file menu also provides *Fold LookML* and *Unfold LookML* options to expand or collapse all LookML sections down to the top-level parameter within the current file and We can also use keyboard shortcuts to fold and unfold LookML:
+
+<img src="/Images/LookML-Fold-Unfold-IDE.png" width=300 hieght=400>
